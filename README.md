@@ -1,7 +1,10 @@
 # README
 #Ansible" This file contains several Ansible, Filebeat, and Metricbeat playbooks and config files.
+
 #"Diagrams" This file contains networking topologies.
+
 #"Images" This file contains images of activity and project work.
+
 #"Linux" This file contains scripts for Linux cybersecurity.
 
 ## Automated ELK Stack Deployment
