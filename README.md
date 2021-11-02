@@ -133,8 +133,8 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- Web 1 (10.0.0.5)
-- Web 2 (10.0.0.6)
+- Web 1 (10.0.0.7)
+- Web 2 (10.0.0.8)
 
 We have installed the following Beats on these machines:
 - FileBeat
@@ -230,3 +230,23 @@ metricbeats
   - name: start metric beat
     command: service metricbeat start
 ```
+---------------------------------------
+How to use Ansible Build
+Use the nano command to update your configuration files to you specifications
+
+nano ansible.cfg
+nano metricbeat-config.yml
+nano filebeat-config.yml
+Use the nano command to update your hosts file to your private IP address of your machines
+
+nano hosts
+Run the pentest playbook to get your docker containers running for web 1/2 VMs
+
+ansible-playbook pentest.yml
+Run the metricbeat and filebeat playbooks to get both services running on your Elk-VM
+
+ansible-playbook metricbeat-playbook.yml && ansible-playbook filebeat-playbook.yml
+If configured correctly navigating to your Elk-VMs public IP address on port 5601 should produce this screen:
+
+https://github.com/NichoFerg/Project-1/blob/main/Images/Kibana-screen.PNG
+
